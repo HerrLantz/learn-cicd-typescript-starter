@@ -24,6 +24,9 @@ jobs:
       - name: formatting
         run: npm run format:check
 
+      - name: linting
+        run: npm run lint -- --max-warnings=0
+
   tests:
     name: Tests
     runs-on: ubuntu-latest
