@@ -1,24 +1,16 @@
 {
   "name": "learn-cicd-typescript-starter",
   "version": "1.0.0",
-  "main": "dist/main.js",
   "type": "module",
+  "main": "dist/main.js",
   "scripts": {
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "build": "npx tsc",
     "start": "node dist/main.js",
-    "dev": "npx tsc && node dist/main.js"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.9.0",
-    "drizzle-kit": "^0.28.1",
-    "globals": "^15.12.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.6.3"
+    "dev": "npx tsc && node dist/main.js",
+    "test": "vitest --run"
   },
   "dependencies": {
     "@libsql/client": "^0.14.0",
@@ -28,11 +20,27 @@
     "express": "^4.21.1",
     "uuid": "^11.0.3"
   },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@vitest/coverage-v8": "^4.1.11",
+    "drizzle-kit": "^0.28.1",
+    "globals": "^15.12.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^4.0.18"
+  },
   "prettier": {
     "printWidth": 80,
-    "useTabs": false,
-    "tabWidth": 2,
     "semi": true,
-    "singleQuote": false
+    "singleQuote": false,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "allowScripts": {
+    "esbuild@0.18.20": true,
+    "esbuild@0.19.12": true,
+    "esbuild@0.28.2": true
   }
 }
